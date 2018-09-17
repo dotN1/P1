@@ -13,6 +13,7 @@ public class TrialProgram {
         System.out.println("Введите кол-во метров");
         input1.scan1();
         meter = input1.x;
+        System.out.println();
      
         System.out.println("В какие единицы измерения хотите перевести? "
                             + "1 - дюймы , 2 - футы , 3 - ярды");
@@ -38,6 +39,7 @@ public class TrialProgram {
             default:
                 System.out.println("Вы ввели неверное значение");
                 break;
+        
         }
     }
 }
