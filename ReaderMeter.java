@@ -1,11 +1,10 @@
-package TrialProgram;
+package test;
 import java.util.Scanner;
 
 public class ReaderMeter {
-    double x;
-    public void scan1(){
+    double incomingValue;
+    public void scan(){
         Scanner scn = new Scanner(System.in);
-        x = scn.nextDouble();
+        incomingValue = scn.nextDouble();
     }
-    
 }

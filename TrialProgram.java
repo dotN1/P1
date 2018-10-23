@@ -1,48 +1,44 @@
-package TrialProgram;
+package test;
 
 
 public class TrialProgram {
     public static void main(String[] args) {
-         
+    
         double meter;
-        int answer; 
+        int answer;
         
-        ReaderMeter input1 = new ReaderMeter();
-        ReaderAnswer input2 = new ReaderAnswer();
+        ReaderMeter meterValue = new ReaderMeter();
+        ReaderAnswer answerValue = new ReaderAnswer();
         
-        System.out.println("Введите кол-во метров");
-        input1.scan1();
-        meter = input1.x;
+        System.out.println("Enter the number of meters ");
+        meterValue.scan();
+        meter = meterValue.incomingValue;
         System.out.println();
-     
-        System.out.println("В какие единицы измерения хотите перевести? "
-                            + "1 - дюймы , 2 - футы , 3 - ярды");
-        input2.scan2();
-        answer = input2.y;
         
-        switch (answer) {
+        System.out.println("In which units you want to convert? "
+                + "1 - inches, 2 - feet, 3 - yards ");
+        answerValue.scan();
+        answer = answerValue.answerNumber;
+        
+        switch (answer) { 
             case 1:
-                System.out.print(meter + " метров равны = ");
-                System.out.printf("%.2f" , meter*39.37);
-                System.out.println(" дюймов.");
+                System.out.print(meter + "meters are equal = ");
+                System.out.printf("%.2f", meter*39.37);
+                System.out.println(" inches");
                 break;
             case 2:
-                System.out.print(meter + " метров равны = ");
-                System.out.printf("%.2f" , meter*3.28);
-                System.out.println(" футов.");
+                System.out.print(meter + "meters are equal = ");
+                System.out.printf("%.2f", meter*3.28);
+                System.out.println(" feet");
                 break;
             case 3:
-                System.out.print(meter + " метров равны = ");
-                System.out.printf("%.2f" , meter*1.09);
-                System.out.println(" ярдов.");
+                System.out.print(meter + "meters are equal = ");
+                System.out.printf("%.2f", meter*1.09);
+                System.out.println(" yards");
                 break;
             default:
-                System.out.println("Вы ввели неверное значение");
-                break;
-        
+                System.out.println("You entered an invalid value");
         }
+    
     }
 }
-
-
-

@@ -1,10 +1,10 @@
-package TrialProgram;
+package test;
 import java.util.Scanner;
 
 public class ReaderAnswer {
-    int y;
-    public void scan2(){
+    int answerNumber;
+    public void scan(){
         Scanner scn = new Scanner(System.in);
-        y = scn.nextInt();
+        answerNumber = scn.nextInt();
     }
 }
